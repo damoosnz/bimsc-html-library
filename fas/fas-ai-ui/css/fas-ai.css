@@ -1,4 +1,4 @@
-fas-ai-button {
+.fas-ai-button {
     background-color: violet;
     color: white;
     border: none;
@@ -9,6 +9,6 @@ fas-ai-button {
     transition: background-color 0.2s ease-in-out;
 }
 
-fas-ai-button.hover {
+.fas-ai-button.hover {
     background-color: darkviolet;
 }
