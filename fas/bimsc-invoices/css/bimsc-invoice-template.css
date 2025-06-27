@@ -20,6 +20,10 @@ body {
     padding-bottom: 10px;
 }
 
+.invoice-footer{
+    padding-top: 10px;
+}
+
 .invoice-logo {
     width: 45%;
     flex-shrink: 0;
