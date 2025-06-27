@@ -5,78 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bimsc-invoice-template.css">
-    <title>Document</title>
-    <style>
-
-
-    </style>
+    <!-- <link rel="stylesheet" href="https://damoosnz.github.io/bimsc-html-library/fas/bimsc-invoices/css/bimsc-invoice-template.css"> -->
+    <title>Tax Invoice</title>
 </head>
 
 <body>
     <div class="invoice-container">
+
         <div class="invoice-header">
+
             <div class="invoice-logo">
                 <img src="https://static.wixstatic.com/media/3463e7_3bf75198f4114ca98c0524da29a44441~mv2.png/v1/fill/w_162,h_88,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled.png"
                     alt="BIMSC logo">
             </div>
+
             <div class="invoice-from right">
-                <xlgeTxt>TAX INVOICE</xlgeTxt>
-                <p>
-                    <b>BIM Solutions Centre Ltd </b> <br>
-                    9 Mckellar Street <br>
-                    Oakura, Taranaki 4314 <br>
-                    New Zealand
-                </p>
-                <p>
-                    Phone: +64 6 752 1361 <br>
-                    Mobile: +64 21059 3779 <br>
-                    www.bimsolutionscentre.com
-                </p>
+                <div class="xlgeTxt">TAX INVOICE</div>
+                <div>
+                    <div><b>BIM Solutions Centre Ltd </b></div>
+                    <div>9 Mckellar Street</div>
+                    <div>Oakura, Taranaki 4314 </div>
+                    <div>New Zealand</div>
+                </div>
+                <div>
+                    <div>Phone: +64 6 752 1361</div>
+                    <div>www.bimsolutionscentre.com</div>
+                </div>
             </div>
         </div>
+
         <div class="invoice-summary">
+
             <div class="invoice-to left">
-                <p>
-                <lgeTxt>Bill to :<br></lgeTxt>
-                <b>CENTRES AQUATIQUES CUGPSEO (Aqualude)</b> <br>
-                1 Rue Jean Jaouen <br>
-                Mantes-la-Ville 78711 <br>
-                France <br>
-                facturation@prestalis.com
-                </p>
-
-
-
+                <div class="lgeTxt">Bill to :<br></div>
+                <div>
+                    <div id="si-name"><b>CENTRES AQUATIQUES CUGPSEO (Aqualude)</b></div>
+                    <div id="si-street">1 Rue Jean Jaouen</div>
+                    <div id="si-city">Mantes-la-Ville 78711</div>
+                    <div id="si-country">France</div>
+                    <div id="si-email">facturation@prestalis.com</div>
+                </div>
             </div>
-            <div class="invoice-summary-data right">
-                <p>
-                <table style="border-collapse: collapse;">
-                    <tr>
-                        <td>
-                           <lgeTxt>Invoice Number:</lgeTxt> 
-                        </td>
-                        <td>
-                           <lgeTxt>PRE0030-01</lgeTxt> 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>Invoice Date:</b></td>
-                        <td>January 12, 2025</td>
-                    </tr>
-                    <tr>
-                        <td> <b>Payment Due:</b></td>
-                        <td>January 26, 2025</td>
-                    </tr>
-                    <tr style="background-color:  lightblue;">
-                        <td style="padding: 10px 0;"><b>Amount Due (EUR):</b></td>
-                        <td>€2,538.90 </td>
-                    </tr>
 
-                </table>
-                </p>
-
+            <div class="invoice-summary-data left">
+                <div class="invoice-summary-data-items">
+                    <span class="lgeTxt">Invoice Number:</span>
+                    <span id="inv-num" class="lgeTxt">PRE0030-01</span>
+                </div>
+                <div class="invoice-summary-data-items">
+                    <span class="left"><b>Invoice Date:</b></span>
+                    <span id="inv-issue-date">January 12, 2025</span>
+                </div>
+                <div class="invoice-summary-data-items">
+                    <span> <b>Payment Due:</b></span>
+                    <span id="inv-du-date">January 26, 2025</span>
+                </div>
+                <div class="invoice-summary-data-items" style="background-color:  lightblue;">
+                    <span style="padding: 10px 0;"><b>Amount Due (EUR):</b></span>
+                    <span id="inv-amt">€2,538.90 </span>
+                </div>
             </div>
+
         </div>
+
         <div class="invoice details">
             <table class="table-with-padding" style="border-collapse: collapse; width: 100%;">
                 <thead>
@@ -89,37 +80,38 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="width: 50%;">Subscription a la plateforme Findaservice <br>
-                            Missions Oct - 2024 <br>
-                            Details des missions disponibles sur votre espace client dans l'onglet Payment</td>
+                        <td style="width: 50%;">
+                            <div>Subscription a la plateforme Findaservice</div>
+                            <div id="inv-period">Missions Oct - 2024</div>
+                            <div>Details des missions disponibles sur votre espace client dans l'onglet Payment</div>
+                        </td>
                         <td class="centered">1</td>
-                        <td class="centered">€2,538.90</td>
-                        <td class="centered">€2,538.90</td>
+                        <td id="inv-amt" class="centered">€2,538.90</td>
+                        <td id="inv-amt" class="centered">€2,538.90</td>
                     </tr>
                     <tr>
                         <td></td>
                         <td></td>
                         <td class="right">Total: </td>
-                        <td class="centered">€2,538.90</td>
+                        <td id="inv-amt" class="centered">€2,538.90</td>
                     </tr>
                     <tr>
                         <td></td>
                         <td></td>
                         <td class="right">Amount Due :</td>
-                        <td class="centered">€2,538.90</td>
+                        <td id="inv-amt" class="centered">€2,538.90</td>
                     </tr>
 
                 </tbody>
             </table>
 
-
         </div>
-        <div class="invoice notes">
+        <div class=".lgeTxt">
             <p>
             <h3>Notes / Terms</h3>
             <table>
                 <tr>
-                    <td>"Please remit to</td>
+                    <td>Please remit to</td>
                     <td></td>
                 </tr>
                 <tr>
