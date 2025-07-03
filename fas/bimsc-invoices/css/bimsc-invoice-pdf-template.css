@@ -88,7 +88,3 @@ body, html {
     font-weight: bold;
     padding: 5px 0;
 }
-
-* {
-  outline: 1px solid red !important;
-}
