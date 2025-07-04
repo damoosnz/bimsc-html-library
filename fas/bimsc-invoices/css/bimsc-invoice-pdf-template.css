@@ -20,6 +20,10 @@ body, html {
     color: #000;
 }
 
+.invoice-spacer{
+    height: 50px !important;
+}
+
 .invoice-header,
 .invoice-summary {
     display: flex;
