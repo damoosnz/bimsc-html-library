@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoice email</title>
+</head>
+
+<body>
+
+
+
+    <table width="100%" style="font-family:Arial,sans-serif;">
+        <tr>
+            <td align="center">
+                <img src="https://static.wixstatic.com/media/3463e7_3bf75198f4114ca98c0524da29a44441~mv2.png/v1/fill/w_162,h_88,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled.png"
+                    alt="BIMSC logo" height="80" style="height:80px; width:auto;">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="font-size:16px; padding:10px 0;">
+                <b>BIM Solutions Centre Ltd</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                {{InvoiceNum}}
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                for €{{invAmount}}
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                due by {{invDueDate}}
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <a href="{{invLink}}" target="_blank"
+                    style="display:inline-block; background:#136acd; color:#fff; font-size:16px; font-weight:bold; text-decoration:none; border-radius:9999px; padding:10px 24px; margin:10px 0;">
+                    View Invoice
+                </a>
+            </td>
+        </tr>
+                <tr>
+            <td align="center" style="padding:10px 0;">
+                Thank you for your business!
+            </td>
+        </tr>
+        <tr style="font-size:8px;">
+            <td align="center">BIM Solutions Centre Ltd</td>
+        </tr>
+        <tr style="font-size:8px;">
+            <td align="center">9 Mckellar Street</td>
+        </tr>
+        <tr style="font-size:8px;">
+            <td align="center">Oakura 4314</td>
+        </tr>
+        <tr style="font-size:8px;">
+            <td align="center">New Zealand</td>
+        </tr>
+        <tr style="font-size:8px;">
+            <td align="center">+64 6 7521361</td>
+        </tr>
+        <tr style="font-size:8px;">
+            <td align="center">accounts@bimsolutionscentre.com</td>
+        </tr>
+
+
+
+    </table>
+
+
+
+</body>
+
+</html>
