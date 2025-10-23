@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bimsc-invoice-sandbox</title>
+
+    <!-- 1. Static CSS Link (Guaranteed to start loading immediately) -->
+    <link rel="stylesheet"
+        href="https://damoosnz.github.io/bimsc-html-library/fas/bimsc-invoices/css/bimsc-invoice-pdf-template.css">
+
+    <!-- 2. Static Script Tags (Guaranteed to load and execute in this window's scope) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- 3. Final Signaling Script -->
+    <script>
+        // Define the target function on the parent window to signal readiness.
+        // We use window.onload to guarantee all external resources (CSS/JS) are ready.
+        window.onload = function() {
+            // Check if the parent window (opener) and the signaling function exist
+            if (window.opener && window.opener.signalSandboxReady) {
+                 window.opener.signalSandboxReady();
+            } else {
+                 // Fallback for extremely fast loads where the parent might not have fully defined the function yet
+                 setTimeout(function() {
+                     if (window.opener && window.opener.signalSandboxReady) {
+                          window.opener.signalSandboxReady();
+                     }
+                 }, 50);
+            }
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
