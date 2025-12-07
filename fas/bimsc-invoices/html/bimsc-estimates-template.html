@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://damoosnz.github.io/bimsc-html-library/fas/bimsc-invoices/css/bimsc-invoice-pdf-template.css">
+    <title>Tax Invoice</title>
+</head>
+
+<body>
+    <div class="invoice-container">
+
+        <div class="invoice-header">
+
+            <div class="invoice-logo">
+                <img src="https://static.wixstatic.com/media/3463e7_3bf75198f4114ca98c0524da29a44441~mv2.png/v1/fill/w_162,h_88,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled.png"
+                    alt="BIMSC logo">
+            </div>
+
+            <div class="invoice-from right">
+                <div class="xlgeTxt">ESTIMATE</div>
+                <div>
+                    <div><b>BIM Solutions Centre Ltd </b></div>
+                    <div>9 Mckellar Street</div>
+                    <div>Oakura, Taranaki 4314 </div>
+                    <div>New Zealand</div>
+                </div>
+                <div>
+                    <div>Phone: +64 6 752 1361</div>
+                    <div>www.bimsolutionscentre.com</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="invoice-summary">
+
+            <div class="invoice-to left">
+                <div class="lgeTxt">Bill to :</div>
+                <div>
+                    <div data-inv-field="si-name"><b>SI NAME</b></div>
+                    <div data-inv-field="si-street">SI STREET</div>
+                    <div data-inv-field="si-city">SI CITY ZIP</div>
+                    <div data-inv-field="si-country">SI COUNTRY</div>
+                    <div data-inv-field="si-email">SI EMAIL</div>
+                </div>
+            </div>
+
+            <div class="invoice-summary-data left">
+                <div class="invoice-summary-data-items">
+                    <span class="lgeTxt">Estimate Number:</span>
+                    <span data-inv-field="inv-num" class="lgeTxt">INV NUM</span>
+                </div>
+                <div class="invoice-summary-data-items">
+                    <span class="left">Estimate Date:</span>
+                    <span data-inv-field="inv-issue-date">INV ISSUE DATE</span>
+                </div>
+                <div class="invoice-summary-data-items" style="display:none">
+                    <span>Payment Due:</span>
+                    <span data-inv-field="inv-due-date">INV DUE DATE</span>
+                </div>
+                <div class="invoice-summary-data-items" style="background-color:lightblue; border-radius: 10px;">
+                    <span style="padding: 10px 0;"><b>Est Total (EUR):</b></span>
+                    <span data-inv-field="inv-amt"><b>TOTAL</b> </span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="invoice-details">
+            <table class="table-with-padding" style="border-collapse: collapse; width: 100%;">
+                <thead>
+                    <tr style="background-color:  lightgrey; padding: 40px;">
+                        <td>Services</td>
+                        <td class="centered">Quantity</td>
+                        <td class="centered">Price</td>
+                        <td class="centered">Amount</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="centered" colspan="4">
+                            <span>Site: </span>
+                            <span data-inv-field="si-nickname"><b>SI NICKNAME</b></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50%;">
+                            <div>Subscription a la plateforme Findaservice</div>
+                            <ul>
+                                <li data-inv-field="inv-period">INV PERIOD</li>
+                                <li>Details des missions disponibles sur votre espace client dans l'onglet Payment</li>
+                            </ul>
+
+                        </td>
+                        <td class="centered">1</td>
+                        <td data-inv-field="inv-usg" class="centered">INV AMOUNT</td>
+                        <td data-inv-field="inv-usg" class="centered">INV AMOUNT</td>
+                    </tr>
+                    <tr class="inv-adj-row">
+                        <td>
+                            <div>Ajustement comptable</div>
+                        </td>
+                        <td class="centered">1</td>
+                        <td data-inv-field="inv-adj" class="centered">INV ADJ</td>
+                        <td data-inv-field="inv-adj" class="centered">INV ADJ</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="right">Total: </td>
+                        <td data-inv-field="inv-amt" class="centered"><b>INV AMOUNT</b></td>
+                    </tr>
+                    <tr style="display:none">
+                        <td></td>
+                        <td></td>
+                        <td class="right">Paid :</td>
+                        <td data-inv-field="inv-paid" class="centered"><b>PAID</b></td>
+                    </tr>
+                    <tr style="display:none">
+                        <td></td>
+                        <td></td>
+                        <td class="right">Due :</td>
+                        <td data-inv-field="inv-due" class="centered"><b>DUE</b></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="invoice-payments" style="display:none">
+            <div class="lgeTxt">Payments</div>
+            <div class="payments-container"></div>
+        </div>
+
+        <div style="display:none">
+            <div class="lgeTxt">Notes / Terms</div>
+            <table>
+                <tr>
+                    <td style="width: 40%;">Please remit to</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Banking Institute:</td>
+                    <td>TransferWise Europe SA</td>
+                </tr>
+                <tr>
+                    <td>Name of Account holder:</td>
+                    <td>BIM Solutions Centre Limited</td>
+                </tr>
+                <tr>
+                    <td>Bank Address:</td>
+                    <td>Avenue Marnix 13-17, Brussels, 1000, Belgium</td>
+                </tr>
+                <tr>
+                    <td>Account currency :</td>
+                    <td>EUR</td>
+                </tr>
+                <tr>
+                    <td>Contact Details:</td>
+                    <td>Damien Legrand, +61420657954, damien.legrand@bimsolutionscentre.com <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>IBAN:</td>
+                    <td>BE56 9670 3261 3988</td>
+                </tr>
+                <tr>
+                    <td>SWIFT/BIC:</td>
+                    <td>TRWIBEB1XXX</td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="invoice-footer centered">Thank you for your business </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
